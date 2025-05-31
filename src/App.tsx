@@ -1,4 +1,4 @@
-import { Grid, GridItem, Show } from "@chakra-ui/react"
+import { Grid, GridItem } from "@chakra-ui/react"
 import NavBar from "./myComponents/NavBar"
 
 
@@ -13,9 +13,9 @@ const App = () => {
         <NavBar/>
       </GridItem>
       
-      <Show when={['(min-width: 1200px)']}>
+      {/* <Show when={['(min-width: 1200px)']}>
+      </Show> */}
         <GridItem area='aside' bg={"gold"}>Aside</GridItem>
-      </Show>
         <GridItem area='main' bg={"dodgerblue"}>Main</GridItem>
     </Grid>
   )
