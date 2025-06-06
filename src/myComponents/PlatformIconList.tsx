@@ -27,11 +27,11 @@ const PlatformIconList = ({ platforms }: Props) => {
         android: FaAndroid,
         mac: FaApple,
         linux: FaLinux,
-        Ios: MdPhoneIphone,
+        ios: MdPhoneIphone,
         web: BsGlobe
     }
   return (
-    <HStack marginY={1}>
+    <HStack marginX={1}>
       {platforms.map((platform) => (
         <Icon as={iconMap[platform.slug]} color={'gray.500'}/>
       ))}
