@@ -11,9 +11,12 @@ interface Props {
 
 const GameCard = ({ game }: Props) => {
   return (
-    <Card.Root width='300px' borderRadius={10} overflow={'hidden'}>
-      <Card.Body> 
+    <Card.Root >
+      <Card.Title>
         <Image src={getCroppedImageUrl(game.background_image)}/>
+        
+      </Card.Title>
+      <Card.Body> 
         <Heading fontSize={'2xl'}>{game.name}</Heading>
         <HStack justifyContent={'space-between'}>
         <PlatformIconList platforms={game.parent_platforms.map(p => p.platform)}/>
@@ -21,7 +24,7 @@ const GameCard = ({ game }: Props) => {
 
         </HStack>
       </Card.Body>
-      <Card.Footer />
+      
     </Card.Root>
   );
 };
