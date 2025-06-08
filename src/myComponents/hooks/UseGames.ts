@@ -1,6 +1,7 @@
 // import apiClient from "../services/api-client"
 
 import useData from "./UseData"
+import type { Genre } from "./UseGenres"
 
 
 export interface Platform {
@@ -19,6 +20,6 @@ export interface Game {
 
 
 
-const useGames = () => useData<Game>('/games')
+const useGames = (selectedGenre: Genre | null) => useData<Game>('/games', {params: {genres: selectedGenre?.id}}, [selectedGenre?.id])
 
 export default useGames
